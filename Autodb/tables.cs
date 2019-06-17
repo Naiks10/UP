@@ -5,7 +5,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Text;
 using System.Threading.Tasks;
-
+ 
 namespace Autodb
 {
     public class Tables
