@@ -16,5 +16,15 @@ namespace Autodb
         {
             InitializeComponent();
         }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
     }
 }
