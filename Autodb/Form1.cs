@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using Microsoft.Win32;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,17 @@ namespace Autodb
         public Form1()
         {
             InitializeComponent();
+            RegistryKey currentUserKey = Registry.CurrentUser;
+            RegistryKey helloKey = currentUserKey.OpenSubKey("AS", true);
+            string login = helloKey.GetValue("Activated").ToString();
+            if (login != "1")
+            {
+                MessageBox.Show("Вы не активировали данный программный продукт");
+                button1.Enabled = false;
+                button2.Enabled = false;
+            }
+            helloKey.Close();
+            notifyIcon1.ShowBalloonTip(12);
         }
 
         private void Label6_Click(object sender, EventArgs e)

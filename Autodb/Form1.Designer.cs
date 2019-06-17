@@ -28,8 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +48,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,16 +62,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -103,6 +106,81 @@
             this.tabPage1.Text = "Вход";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label14.Location = new System.Drawing.Point(250, 212);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 24);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Имя базы";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(254, 239);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(334, 29);
+            this.textBox10.TabIndex = 29;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label12.Location = new System.Drawing.Point(417, 153);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 24);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Пароль бд";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label13.Location = new System.Drawing.Point(250, 153);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 24);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Логин бд";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(421, 180);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(167, 29);
+            this.textBox8.TabIndex = 26;
+            this.textBox8.UseSystemPasswordChar = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(254, 180);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(161, 29);
+            this.textBox9.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label11.Location = new System.Drawing.Point(250, 91);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 24);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Сервер";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(254, 118);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(334, 32);
+            this.comboBox2.TabIndex = 23;
             // 
             // label3
             // 
@@ -208,6 +286,25 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Регистрация";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(15, 319);
+            this.maskedTextBox1.Mask = "9 (999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(334, 29);
+            this.maskedTextBox1.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label10.Location = new System.Drawing.Point(11, 292);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 24);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Номер телефона";
             // 
             // label9
             // 
@@ -326,99 +423,13 @@
             this.textBox4.Size = new System.Drawing.Size(334, 29);
             this.textBox4.TabIndex = 7;
             // 
-            // comboBox2
+            // notifyIcon1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(254, 118);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(334, 32);
-            this.comboBox2.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(250, 91);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 24);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Сервер";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label12.Location = new System.Drawing.Point(417, 153);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 24);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Пароль бд";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label13.Location = new System.Drawing.Point(250, 153);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 24);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Логин бд";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(421, 180);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(167, 29);
-            this.textBox8.TabIndex = 26;
-            this.textBox8.UseSystemPasswordChar = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(254, 180);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 29);
-            this.textBox9.TabIndex = 25;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label14.Location = new System.Drawing.Point(250, 212);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 24);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Имя базы";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(254, 239);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(334, 29);
-            this.textBox10.TabIndex = 29;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(11, 292);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 24);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Номер телефона";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 319);
-            this.maskedTextBox1.Mask = "9 (999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(334, 29);
-            this.maskedTextBox1.TabIndex = 22;
+            this.notifyIcon1.BalloonTipText = "Приложение запущено, наслаждайтесь!";
+            this.notifyIcon1.BalloonTipTitle = "Окно запущено";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -472,6 +483,7 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
