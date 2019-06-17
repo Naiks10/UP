@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Autodb
 {
@@ -23,10 +24,24 @@ namespace Autodb
             return instance.GetDataSources();
         }
 
-        public static async void fillServers()
+        public static async void fillServers(ComboBox cb)
         {
             //Вызвать этот метод и в currentServers появятся доступные сервера
             currentServers = await Task.Run(() => getServers());
+            try
+            {
+                foreach (DataRow row in currentServers.Rows)
+                {
+                    if (row["InstanceName"].ToString() == "")
+                        cb.Items.Add(row["ServerName"]);
+                    else
+                        cb.Items.Add(row["ServerName"] + "\\" + row["InstanceName"]);
+                }
+            }
+            catch (NullReferenceException)
+            {
+                Application.Exit();
+            }
         }
 
         public static void startConnection(String connectionString)
