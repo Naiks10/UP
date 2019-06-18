@@ -54,7 +54,7 @@ namespace Autodb
             {
                 MessageBox.Show("Невозможно подключиться к серверу БД. Проверьте правильность данных сервера\n");
             }
-            string passwordHash = crypt.getHash(textBox2.Text);
+            string passwordHash = crypting.crypt.getHash(textBox2.Text);
 
             try
             {
