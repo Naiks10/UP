@@ -43,26 +43,32 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cueTextBox2 = new CueTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.cueTextBox6 = new CueTextBox();
-            this.cueTextBox5 = new CueTextBox();
-            this.cueTextBox4 = new CueTextBox();
-            this.cueTextBox3 = new CueTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cueTextBox1 = new CueTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.ZakTable = new System.Windows.Forms.DataGridView();
+            this.button10 = new System.Windows.Forms.Button();
+            this.cueTextBox2 = new CueTextBox();
+            this.cueTextBox6 = new CueTextBox();
+            this.cueTextBox5 = new CueTextBox();
+            this.cueTextBox4 = new CueTextBox();
+            this.cueTextBox3 = new CueTextBox();
+            this.cueTextBox1 = new CueTextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -70,6 +76,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZakTable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -84,12 +91,17 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 34);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 416);
+            this.tabControl1.Size = new System.Drawing.Size(893, 416);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.SkyBlue;
+            this.tabPage1.Controls.Add(this.button13);
+            this.tabPage1.Controls.Add(this.button12);
+            this.tabPage1.Controls.Add(this.button11);
+            this.tabPage1.Controls.Add(this.button10);
+            this.tabPage1.Controls.Add(this.ZakTable);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.label2);
@@ -103,9 +115,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 380);
+            this.tabPage1.Size = new System.Drawing.Size(885, 380);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Оформление заказа";
+            this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // label4
             // 
@@ -123,17 +136,18 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(624, 340);
+            this.button6.Location = new System.Drawing.Point(10, 331);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(135, 31);
             this.button6.TabIndex = 8;
             this.button6.Text = "Создать";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 36);
+            this.label2.Location = new System.Drawing.Point(7, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 7;
@@ -168,7 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 152);
+            this.label1.Location = new System.Drawing.Point(7, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 4;
@@ -181,6 +195,8 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(158, 21);
             this.comboBox4.TabIndex = 3;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.ComboBox4_SelectedIndexChanged);
+            this.comboBox4.Click += new System.EventHandler(this.ComboBox4_Click);
             // 
             // comboBox3
             // 
@@ -211,15 +227,15 @@
             this.tabPage2.BackColor = System.Drawing.Color.SkyBlue;
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.cueTextBox2);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.comboBox6);
             this.tabPage2.Controls.Add(this.comboBox7);
+            this.tabPage2.Controls.Add(this.cueTextBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 380);
+            this.tabPage2.Size = new System.Drawing.Size(885, 380);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Машины";
             // 
@@ -239,14 +255,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 187);
             this.dataGridView1.TabIndex = 21;
-            // 
-            // cueTextBox2
-            // 
-            this.cueTextBox2.Cue = "Номер машины";
-            this.cueTextBox2.Location = new System.Drawing.Point(6, 37);
-            this.cueTextBox2.Name = "cueTextBox2";
-            this.cueTextBox2.Size = new System.Drawing.Size(158, 20);
-            this.cueTextBox2.TabIndex = 20;
             // 
             // label5
             // 
@@ -298,42 +306,10 @@
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(768, 380);
+            this.tabPage3.Size = new System.Drawing.Size(885, 380);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Клиент";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // cueTextBox6
-            // 
-            this.cueTextBox6.Cue = "Телефон";
-            this.cueTextBox6.Location = new System.Drawing.Point(6, 115);
-            this.cueTextBox6.Name = "cueTextBox6";
-            this.cueTextBox6.Size = new System.Drawing.Size(158, 20);
-            this.cueTextBox6.TabIndex = 32;
-            // 
-            // cueTextBox5
-            // 
-            this.cueTextBox5.Cue = "Отчетсво";
-            this.cueTextBox5.Location = new System.Drawing.Point(6, 89);
-            this.cueTextBox5.Name = "cueTextBox5";
-            this.cueTextBox5.Size = new System.Drawing.Size(158, 20);
-            this.cueTextBox5.TabIndex = 31;
-            // 
-            // cueTextBox4
-            // 
-            this.cueTextBox4.Cue = "Имя ";
-            this.cueTextBox4.Location = new System.Drawing.Point(6, 63);
-            this.cueTextBox4.Name = "cueTextBox4";
-            this.cueTextBox4.Size = new System.Drawing.Size(158, 20);
-            this.cueTextBox4.TabIndex = 30;
-            // 
-            // cueTextBox3
-            // 
-            this.cueTextBox3.Cue = "Фамилия";
-            this.cueTextBox3.Location = new System.Drawing.Point(6, 37);
-            this.cueTextBox3.Name = "cueTextBox3";
-            this.cueTextBox3.Size = new System.Drawing.Size(158, 20);
-            this.cueTextBox3.TabIndex = 27;
             // 
             // label8
             // 
@@ -363,7 +339,7 @@
             this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(768, 380);
+            this.tabPage4.Size = new System.Drawing.Size(885, 380);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Справочник должностей";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -379,14 +355,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(141, 382);
             this.panel1.TabIndex = 9;
-            // 
-            // cueTextBox1
-            // 
-            this.cueTextBox1.Cue = "Наименование";
-            this.cueTextBox1.Location = new System.Drawing.Point(5, 7);
-            this.cueTextBox1.Name = "cueTextBox1";
-            this.cueTextBox1.Size = new System.Drawing.Size(133, 20);
-            this.cueTextBox1.TabIndex = 8;
             // 
             // button1
             // 
@@ -433,7 +401,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(648, 12);
+            this.button7.Location = new System.Drawing.Point(763, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(135, 35);
             this.button7.TabIndex = 9;
@@ -443,18 +411,133 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(539, 23);
+            this.label3.Location = new System.Drawing.Point(644, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Имя пользователя";
+            // 
+            // ZakTable
+            // 
+            this.ZakTable.AllowUserToAddRows = false;
+            this.ZakTable.AllowUserToDeleteRows = false;
+            this.ZakTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ZakTable.Location = new System.Drawing.Point(208, 6);
+            this.ZakTable.Name = "ZakTable";
+            this.ZakTable.ReadOnly = true;
+            this.ZakTable.Size = new System.Drawing.Size(671, 319);
+            this.ZakTable.TabIndex = 10;
+            this.ZakTable.SelectionChanged += new System.EventHandler(this.ZakTable_SelectionChanged);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.SteelBlue;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.Location = new System.Drawing.Point(10, 294);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(135, 31);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "ГАЛЯ!";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // cueTextBox2
+            // 
+            this.cueTextBox2.Cue = "Номер машины";
+            this.cueTextBox2.Location = new System.Drawing.Point(6, 37);
+            this.cueTextBox2.Name = "cueTextBox2";
+            this.cueTextBox2.Size = new System.Drawing.Size(158, 20);
+            this.cueTextBox2.TabIndex = 20;
+            // 
+            // cueTextBox6
+            // 
+            this.cueTextBox6.Cue = "Телефон";
+            this.cueTextBox6.Location = new System.Drawing.Point(6, 115);
+            this.cueTextBox6.Name = "cueTextBox6";
+            this.cueTextBox6.Size = new System.Drawing.Size(158, 20);
+            this.cueTextBox6.TabIndex = 32;
+            // 
+            // cueTextBox5
+            // 
+            this.cueTextBox5.Cue = "Отчетсво";
+            this.cueTextBox5.Location = new System.Drawing.Point(6, 89);
+            this.cueTextBox5.Name = "cueTextBox5";
+            this.cueTextBox5.Size = new System.Drawing.Size(158, 20);
+            this.cueTextBox5.TabIndex = 31;
+            // 
+            // cueTextBox4
+            // 
+            this.cueTextBox4.Cue = "Имя ";
+            this.cueTextBox4.Location = new System.Drawing.Point(6, 63);
+            this.cueTextBox4.Name = "cueTextBox4";
+            this.cueTextBox4.Size = new System.Drawing.Size(158, 20);
+            this.cueTextBox4.TabIndex = 30;
+            // 
+            // cueTextBox3
+            // 
+            this.cueTextBox3.Cue = "Фамилия";
+            this.cueTextBox3.Location = new System.Drawing.Point(6, 37);
+            this.cueTextBox3.Name = "cueTextBox3";
+            this.cueTextBox3.Size = new System.Drawing.Size(158, 20);
+            this.cueTextBox3.TabIndex = 27;
+            // 
+            // cueTextBox1
+            // 
+            this.cueTextBox1.Cue = "Наименование";
+            this.cueTextBox1.Location = new System.Drawing.Point(5, 7);
+            this.cueTextBox1.Name = "cueTextBox1";
+            this.cueTextBox1.Size = new System.Drawing.Size(133, 20);
+            this.cueTextBox1.TabIndex = 8;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.SteelBlue;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.Location = new System.Drawing.Point(208, 331);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(135, 31);
+            this.button11.TabIndex = 12;
+            this.button11.Text = "В Word";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.Button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.SteelBlue;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button12.Location = new System.Drawing.Point(349, 331);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(135, 31);
+            this.button12.TabIndex = 13;
+            this.button12.Text = "В PDF";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.Button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.SteelBlue;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button13.Location = new System.Drawing.Point(490, 331);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(135, 31);
+            this.button13.TabIndex = 14;
+            this.button13.Text = "В Excel";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // MainFormcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(795, 462);
+            this.ClientSize = new System.Drawing.Size(906, 462);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.tabControl1);
@@ -471,6 +554,7 @@
             this.tabPage4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZakTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,5 +597,11 @@
         private CueTextBox cueTextBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DataGridView ZakTable;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

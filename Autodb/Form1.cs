@@ -66,7 +66,10 @@ namespace Autodb
                     var snd = new SoundPlayer(Properties.Resources.fit);
                     snd.Play();
                     snd.Dispose();
-
+                    this.Hide();
+                    MainFormcs mainFormcs = new MainFormcs();
+                    mainFormcs.Show();
+                    mainFormcs.FormClosed += MainFormcs_FormClosed;
                 }
                 else
                 {
@@ -76,10 +79,15 @@ namespace Autodb
                     MessageBox.Show("Ошибка. Проверьте введеные данные");                    
                 }                
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Ошибка. Проверьте введеные данные");
+                MessageBox.Show("Ошибка. Проверьте введеные данные" + ex.Message);
             }            
+        }
+
+        private void MainFormcs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
