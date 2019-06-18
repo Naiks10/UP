@@ -10,7 +10,7 @@ using System.Text;
 using Microsoft.Win32;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using cryptIO = Crypting;
+using crypting = CryptIO;
 
 namespace Autodb
 {
@@ -137,7 +137,7 @@ namespace Autodb
                 {
                     string result = new SqlCommand("SELECT top(1) ID_ROLE from dbo.ROLE_ where GUEST>0", db.connection).ExecuteScalar().ToString();
                     
-                    new SqlCommand("EXEC INSERT_USERS '" + textBox4.Text + "', '" + cryptIO.crypt.getHash(textBox3.Text) + "', '" + result + "'", db.connection).ExecuteNonQuery();
+                    new SqlCommand("EXEC INSERT_USERS '" + textBox4.Text + "', '" + crypting.crypt.getHash(textBox3.Text) + "', '" + result + "'", db.connection).ExecuteNonQuery();
                     new SqlCommand("EXEC INSERT_SOTR_1 '" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '"
                         + maskedTextBox1.Text + "', '" + result + "'", db.connection).ExecuteScalar();
                     var snd = new SoundPlayer(Properties.Resources.fit);
