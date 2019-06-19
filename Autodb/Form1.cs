@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.IO;
 using System.Text;
 using Microsoft.Win32;
 using System.Threading.Tasks;
@@ -19,6 +20,12 @@ namespace Autodb
         public Form1()
         {
             InitializeComponent();
+            FileInfo file = new FileInfo(Application.StartupPath + "/CryptIO.dll");
+            if (!file.Exists)
+            {
+                MessageBox.Show("Динамическая библиотека CryptIO неустановлена. \n Переустановите приложение.");
+                Close();
+            }
             RegistryKey currentUserKey = Registry.CurrentUser;
             RegistryKey helloKey = currentUserKey.OpenSubKey("AS", true);
             string login = helloKey.GetValue("Activated").ToString();
