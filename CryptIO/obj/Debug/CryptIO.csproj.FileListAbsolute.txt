@@ -1,5 +1,0 @@
-C:\Users\Ultra\source\repos\UP\CryptIO\bin\Debug\CryptIO.dll
-C:\Users\Ultra\source\repos\UP\CryptIO\bin\Debug\CryptIO.pdb
-C:\Users\Ultra\source\repos\UP\CryptIO\obj\Debug\CryptIO.csproj.CoreCompileInputs.cache
-C:\Users\Ultra\source\repos\UP\CryptIO\obj\Debug\CryptIO.dll
-C:\Users\Ultra\source\repos\UP\CryptIO\obj\Debug\CryptIO.pdb

@@ -186,26 +186,31 @@ namespace Autodb
 
         private string filename;
 
-        private void Button11_Click(object sender, EventArgs e)
+        private async void Button11_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
             filename = saveFileDialog1.FileName;
-            wordandpdf(1);
+            await Task.Run(() => wordandpdf(1));//ma code
             filename = null;
         }
 
-        private void Button12_Click(object sender, EventArgs e)
+        private async void Button12_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
             filename = saveFileDialog1.FileName;
-            wordandpdf(2);
+            await Task.Run(() => wordandpdf(2));
             filename = null;
         }
 
-        private void Button13_Click(object sender, EventArgs e)
+        private async void Button13_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
             filename = saveFileDialog1.FileName;
+            await Task.Run(() => excel());
+        }
+
+        private void excel()
+        {
             //Объявляем приложение 
             Excel.Application ex = new Excel.Application();
             //Отобразить Excel 
