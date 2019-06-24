@@ -20,6 +20,12 @@ namespace Autodb
         public Form1()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.color == "Gray")
+            {
+                BackColor = Color.Gray;
+                tabControl1.TabPages[0].BackColor = Color.Gray;
+                tabControl1.TabPages[1].BackColor = Color.Gray;
+            }
             FileInfo file = new FileInfo(Application.StartupPath + "/CryptIO.dll");
             if (!file.Exists)
             {

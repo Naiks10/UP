@@ -47,7 +47,9 @@ namespace Autodb
         public static void startConnection(String connectionString)
         {
             connection = new SqlConnection(connectionString);
+            SqlDependency.Start(connection.ConnectionString);
             connection.Open();
         }
     }
 }
+

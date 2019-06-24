@@ -124,6 +124,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(334, 29);
             this.textBox10.TabIndex = 29;
+            this.textBox10.Text = "autodb";
             // 
             // label12
             // 
@@ -153,6 +154,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(167, 29);
             this.textBox8.TabIndex = 26;
+            this.textBox8.Text = "123";
             this.textBox8.UseSystemPasswordChar = true;
             // 
             // textBox9
@@ -161,6 +163,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(161, 29);
             this.textBox9.TabIndex = 25;
+            this.textBox9.Text = "sa";
             // 
             // label11
             // 
@@ -181,6 +184,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(334, 32);
             this.comboBox2.TabIndex = 23;
+            this.comboBox2.Text = "DESKTOP-48J233N";
             // 
             // label3
             // 
@@ -251,6 +255,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(334, 29);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "123";
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -260,6 +265,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(334, 29);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "admin";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tabPage2
